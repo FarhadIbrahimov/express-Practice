@@ -3,7 +3,7 @@
 ## Table of Contents
 
 - [Array Filter Function Explanation](#array-filter-function-explanation)
-- [Exploring Routes in the Model-View-Controller (MVC) Architecture](#exploring-routes-in-the-model-view-controller-mvc-architecture)
+- [Exploring Routes in the Model-View-Controller (MVC) Architecture](#exploring-routes-in-the-model-view-controller-mvc-architecture) -[Destructuring Explanation](#Destructuring)
 
 ### Array Filter Function Explanation
 
@@ -94,4 +94,5 @@ const {
   deletePerson,
 } = require("../controllers/people");
 ```
+
 In this line of code, we're importing specific functions from the "../controllers/people" module and assigning them to variables with the same names (getPeople, createPerson, etc.). This process simplifies the way we access and use these functions in our code, promoting better readability and reducing redundancy.

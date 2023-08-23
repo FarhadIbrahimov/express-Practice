@@ -3,7 +3,8 @@
 ## Table of Contents
 
 - [Array Filter Function Explanation](#array-filter-function-explanation)
-- [Exploring Routes in the Model-View-Controller (MVC) Architecture](#exploring-routes-in-the-model-view-controller-mvc-architecture) -[Destructuring Explanation](#Destructuring)
+- [Exploring Routes in the Model-View-Controller (MVC) Architecture](#exploring-routes-in-the-model-view-controller-mvc-architecture)
+- [Destructuring Explanation](#Destructuring)
 
 ### Array Filter Function Explanation
 

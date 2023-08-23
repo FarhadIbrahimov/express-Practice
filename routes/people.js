@@ -9,19 +9,23 @@ const {
   deletePerson,
 } = require("../controllers/people");
 
-// Handle GET request to fetch a list of people
-router.get("/", getPeople);
+// // Handle GET request to fetch a list of people
+// router.get("/", getPeople);
 
-// Handle POST request to add a new person
-router.post("/", createPerson);
+// // Handle POST request to add a new person
+// router.post("/", createPerson);
 
-// Handle POST request to add a new person via Postman route
-router.post("/postman", createPersonPostman);
+// // Handle POST request to add a new person via Postman route
+// router.post("/postman", createPersonPostman);
 
-// Handle PUT request to update a person's name by ID
-router.put("/:id", updatePerson);
+// // Handle PUT request to update a person's name by ID
+// router.put("/:id", updatePerson);
 
-// Handle DELETE request to remove a person by ID
-router.delete("/:id", deletePerson);
+// // Handle DELETE request to remove a person by ID
+// router.delete("/:id", deletePerson);
+
+router.route("/").get(getPeople).post(createPerson);
+router.route("/postman").post(createPersonPostman);
+router.route("/:id").put(updatePerson).delete(deletePerson);
 
 module.exports = router;

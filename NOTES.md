@@ -5,6 +5,7 @@
 - [Array Filter Function Explanation](#array-filter-function-explanation)
 - [Exploring Routes in the Model-View-Controller (MVC) Architecture](#exploring-routes-in-the-model-view-controller-mvc-architecture)
 - [Destructuring Explanation](#Destructuring)
+- [Router Chain method](#RouterChainMethodinExpress)
 
 ### Array Filter Function Explanation
 
@@ -97,3 +98,20 @@ const {
 ```
 
 In this line of code, we're importing specific functions from the "../controllers/people" module and assigning them to variables with the same names (getPeople, createPerson, etc.). This process simplifies the way we access and use these functions in our code, promoting better readability and reducing redundancy.
+
+# Router Chain Method in Express
+
+In Express, the router chain method provides a streamlined way to define multiple HTTP routes for a specific URL path using a single `router.route()` call. This approach enhances code readability and simplifies the process of setting up various HTTP methods for a given route.
+
+### Syntax
+
+```javascript
+router.route(path).get(callback).post(callback).put(callback).delete(callback);
+```
+Explanation
+router.route(path): Begins the router chain for the specified URL path.
+.get(callback): Specifies the handling of HTTP GET requests for the path.
+.post(callback): Specifies the handling of HTTP POST requests for the path.
+.put(callback): Specifies the handling of HTTP PUT requests for the path.
+.delete(callback): Specifies the handling of HTTP DELETE requests for the path.
+By chaining these methods together, we define the corresponding callback functions for each HTTP method associated with the same URL path. This approach offers a clean and concise way to organize and manage routes, improving code structure and maintainability.

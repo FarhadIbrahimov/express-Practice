@@ -78,3 +78,20 @@ Routes define how incoming requests are handled within an MVC application. They 
 4. **Maintenance**: Route configuration allows changes to URLs or the application's structure without affecting other code.
 
 In summary, routes in the MVC architecture define the flow of incoming requests through the application, ensuring each URL corresponds to the right controller action for data processing and rendering. This separation and organization contribute to maintainable and efficient application development.
+
+# Destructuring
+
+Destructuring is a feature in JavaScript that allows you to extract values from objects or arrays and assign them to variables in a concise and convenient way. It's commonly used to access specific properties of objects or elements of arrays without having to write repetitive code.
+
+In provided code snippet, we're using destructuring to import functions from the "../controllers/people" module.
+
+```javascript
+const {
+  getPeople,
+  createPerson,
+  createPersonPostman,
+  updatePerson,
+  deletePerson,
+} = require("../controllers/people");
+```
+In this line of code, we're importing specific functions from the "../controllers/people" module and assigning them to variables with the same names (getPeople, createPerson, etc.). This process simplifies the way we access and use these functions in our code, promoting better readability and reducing redundancy.

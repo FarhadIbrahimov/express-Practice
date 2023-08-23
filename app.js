@@ -12,11 +12,6 @@ app.use(express.json());
 // Parse incoming form data
 app.use(express.urlencoded({ extended: false }));
 
-// Handle GET request to fetch a list of people
-app.get("/api/people", (req, res) => {
-  res.status(200).json({ success: true, data: people });
-});
-
 // Handle POST request for basic login
 app.post("/login", (req, res) => {
   const { name } = req.body;
@@ -24,6 +19,11 @@ app.post("/login", (req, res) => {
     return res.status(200).send(`Welcome ${name}`);
   }
   res.status(401).send("Please provide credentials");
+});
+
+// Handle GET request to fetch a list of people
+app.get("/api/people", (req, res) => {
+  res.status(200).json({ success: true, data: people });
 });
 
 // Handle POST request to add a new person
@@ -38,7 +38,7 @@ app.post("/api/people", (req, res) => {
 });
 
 // Handle POST request to add a new person via Postman route
-app.post("/api/postman/people", (req, res) => {
+app.post("/api/people/postman", (req, res) => {
   const { name } = req.body;
   if (!name) {
     return res
